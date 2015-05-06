@@ -38,7 +38,7 @@
 
     $(document).ready(function () {
         
-        var facebookLikes = ['https://graph.facebook.com/Aftonbladet'];
+        var facebookLikes = ['http://data.goteborg.se/AirQualityService/v1.0/LatestMeasurement/fa7d3ce5-5713-4df7-a4c6-14acfaac4c31?format=json'];
         
         $.each(facebookLikes, function(facebookLikesINDEX, facebookLikesVALUE) {
             var urlForGetJSONfunction = "'" + facebookLikesVALUE + "'"
@@ -108,8 +108,8 @@
             </div>
             <div class="row" id="sampleArea">
                 <script id="sharesTemplate" type="text/template">
-                                <h4>{{likes}}</h4>
-                                <p class="text-muted">{{about}}</p>
+                                <h4>{{Weather.Temperature.Value}}</h4>
+                                <p class="text-muted">{{Weather.Humidity.Value}}</p>
                 </script>
             </div>
         </div>
